@@ -6,5 +6,6 @@ export interface InfoPagina {
     email?: String; 
     twitter?: String;
     facebook?: String; 
+    instagram?: String;
 
 }

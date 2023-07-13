@@ -9,8 +9,8 @@ import { InfoPaginaService } from './services/info-pagina.service';
 export class AppComponent {
   
   constructor(public infoPagina: InfoPaginaService){
-    //leer archivo json
-
+    var x = this.infoPagina.info;
+    console.log(x)
   }
 
 }
