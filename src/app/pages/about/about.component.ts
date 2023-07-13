@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { InfoPagina } from 'src/app/interfaces/info-pagina.interface';
+import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 
 @Component({
   selector: 'app-about',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+
+  constructor(public _info: InfoPaginaService){
+
+  }
 
 }
