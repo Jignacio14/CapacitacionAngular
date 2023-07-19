@@ -11,7 +11,7 @@ export class FooterComponent {
   anio: number = new Date().getFullYear();
 
   constructor(public _info: InfoPaginaService) {}
-
+  
   ngOnInit() {}
 
 }
