@@ -10,7 +10,7 @@ import { Producto } from '../interfaces/producto.interface';
 export class ProductosService {
 
   private itemsLink: string = 'https://angular-html-cb669-default-rtdb.firebaseio.com/productos_idx.json';
-  cargado = false;
+  public cargado = true;
   productos: Producto[] = [];
 
   constructor(private http:HttpClient) { 
@@ -20,10 +20,14 @@ export class ProductosService {
   private cargarProductos(){
     this.http.get<Producto[]>(this.itemsLink).subscribe(
       (resp: Producto[]) => {
-        this.cargado = true;
+        this.cargado = false;
         this.productos = resp;
       });
   
+  }
+
+  public getProducto(id: String){
+    return this.http.get(`https://angular-html-cb669-default-rtdb.firebaseio.com/productos/${id}.json`);
   }
 
 
